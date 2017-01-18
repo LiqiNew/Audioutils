@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#478BF8</color>
+    <color name="colorPrimaryDark">#478BF8</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--提示颜色-->
+    <color name="hint_grey">#B2B2B2</color>
+    <!--title文字颜色-->
+    <color name="textColorPrimary">#478BF8</color>
+    <color name="light_grey">#F4F5F7</color>
+</resources>

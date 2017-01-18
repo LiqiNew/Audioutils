@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/layou_h_w_match_parent"
+                android:background="#FFFFFF">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/voice_toolbar"
+        style="@style/layou_h_wrap_content_w_match_parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            style="@style/layou_h_w_wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="声　　音"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"/>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/voice_bottom"
+        style="@style/layou_h_wrap_content_w_match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/voice_rerecording"
+            style="@style/layou_h_match_parent_w_0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_white_grey"
+            android:gravity="center_vertical"
+            android:text="重录"
+            android:textColor="#B2B2B2"
+            android:textSize="15sp"/>
+
+        <LinearLayout
+            style="@style/layou_h_w_wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/voice_play"
+                style="@style/layou_h_w_wrap_content"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/con_voice_record"/>
+
+            <TextView
+                android:id="@+id/voice_go_hint"
+                style="@style/layou_h_w_wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="点击录音"
+                android:textColor="#478BF8"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/voice_ok"
+            style="@style/layou_h_match_parent_w_0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_white_grey"
+            android:gravity="right|center_vertical"
+            android:text="保存"
+            android:textColor="#B2B2B2"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layou_h_w_match_parent"
+        android:layout_above="@id/voice_bottom"
+        android:layout_below="@id/voice_toolbar"
+        android:orientation="vertical">
+
+        <View
+            style="@style/view_h"/>
+
+        <TextView
+            android:id="@+id/voice_hint_layout"
+            style="@style/layou_h_w_match_parent"
+            android:gravity="center"
+            android:text="请点击话筒开始录音"
+            android:textColor="#666"
+            android:textSize="15sp"/>
+
+        <LinearLayout
+            android:id="@+id/voice_record_layout"
+            style="@style/layou_h_wrap_content_w_match_parent"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/voice_record_time"
+                style="@style/layou_h_w_wrap_content"
+                android:text="00:00"
+                android:textColor="#333333"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                style="@style/layou_h_w_wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="你最多可以录制2分钟"
+                android:textColor="#B2B2B2"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/voice_play_layout"
+            style="@style/layou_h_w_match_parent"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/voice_play_time"
+                style="@style/layou_h_w_wrap_content"
+                android:text="00:00"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
